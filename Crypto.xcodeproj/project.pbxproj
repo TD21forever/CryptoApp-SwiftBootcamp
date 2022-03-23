@@ -12,6 +12,7 @@
 		F502442327DFA945003E4AFC /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502442227DFA945003E4AFC /* PortfolioView.swift */; };
 		F502442527DFAB46003E4AFC /* XmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502442427DFAB46003E4AFC /* XmarkView.swift */; };
 		F502442727DFB0E6003E4AFC /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502442627DFB0E6003E4AFC /* CoinLogoView.swift */; };
+		F5276E6D27EAFCE500DB8347 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5276E6C27EAFCE500DB8347 /* HapticManager.swift */; };
 		F53F0C9F27DCEB53005F3EE3 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53F0C9E27DCEB53005F3EE3 /* StatisticView.swift */; };
 		F53F0CA127DCEB72005F3EE3 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53F0CA027DCEB72005F3EE3 /* StatisticModel.swift */; };
 		F53F0CA327DCFB60005F3EE3 /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53F0CA227DCFB60005F3EE3 /* HomeStatsView.swift */; };
@@ -46,6 +47,8 @@
 		F502442227DFA945003E4AFC /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		F502442427DFAB46003E4AFC /* XmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmarkView.swift; sourceTree = "<group>"; };
 		F502442627DFB0E6003E4AFC /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
+		F5276E6C27EAFCE500DB8347 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		F5276E6E27EAFF7C00DB8347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F53F0C9E27DCEB53005F3EE3 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		F53F0CA027DCEB72005F3EE3 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		F53F0CA227DCFB60005F3EE3 /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 			children = (
 				F5ACF17727CA4FBD00A6ECD5 /* NetworkManage.swift */,
 				F5DB9D7F27D73D2C001258F2 /* LocalFileManager.swift */,
+				F5276E6C27EAFCE500DB8347 /* HapticManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -135,6 +139,7 @@
 		F5EE7FC427BCD52B00E205D9 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				F5276E6E27EAFF7C00DB8347 /* Info.plist */,
 				F5ACF17627CA4FA300A6ECD5 /* Utils */,
 				F5EE7FE327BD1E3100E205D9 /* Models */,
 				F5EE7FD627BCE52400E205D9 /* Core */,
@@ -322,6 +327,7 @@
 				F5EE7FE027BCEE3500E205D9 /* HomeView.swift in Sources */,
 				F502442527DFAB46003E4AFC /* XmarkView.swift in Sources */,
 				F5EE7FEB27BE387400E205D9 /* Double.swift in Sources */,
+				F5276E6D27EAFCE500DB8347 /* HapticManager.swift in Sources */,
 				F5DB9D8227D76F37001258F2 /* SearchBarView.swift in Sources */,
 				F502442727DFB0E6003E4AFC /* CoinLogoView.swift in Sources */,
 				F5E632D127E35009004534E1 /* PortfolioDataService.swift in Sources */,
@@ -468,6 +474,7 @@
 				DEVELOPMENT_TEAM = XC5W5WJCHA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Crypto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -479,7 +486,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bytedance.com.Crypto;
+				PRODUCT_BUNDLE_IDENTIFIER = come.wenzhuo.Crypto001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -498,6 +505,7 @@
 				DEVELOPMENT_TEAM = XC5W5WJCHA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Crypto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -509,7 +517,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bytedance.com.Crypto;
+				PRODUCT_BUNDLE_IDENTIFIER = come.wenzhuo.Crypto001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
