@@ -95,15 +95,48 @@ extension HomeView{
     
     var columnTitles:some View{
         HStack{
+            HStack(spacing:2){
+                Text("Coin")
+                Image(systemName: "chevron.down")
+                    .opacity((vm.sortOption == .coin || vm.sortOption == .coinReverse) ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: vm.sortOption == .coin ? 0 : 180))
+            }
+            .onTapGesture {
+                withAnimation(.default){
+                    vm.sortOption = vm.sortOption == .coin ? .coinReverse : .coin
+                }
+            }
             
-            Text("Coin")
+            
             Spacer()
             if showPortfolio{
-                Text("Holding")
+                HStack(spacing:2){
+                    Text("Holding")
+                    Image(systemName: "chevron.down")
+                        .opacity((vm.sortOption == .holding || vm.sortOption == .holdingReverse) ? 1.0 : 0.0)
+                        .rotationEffect(Angle(degrees: vm.sortOption == .coin ? 0 : 180))
+                }
+                .onTapGesture {
+                    withAnimation(.default){
+                        vm.sortOption = vm.sortOption == .holding ? .holdingReverse : .holding
+                    }
+                }
+            }
+            
+            HStack(spacing:2){
+                Text("Price")
+                    .frame(width: UIScreen.main.bounds.width / 3.5,alignment: .trailing)
+                Image(systemName: "chevron.down")
+                    .opacity((vm.sortOption == .price || vm.sortOption == .priceReverse) ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: vm.sortOption == .price ? 0 : 180))
+            }
+            .onTapGesture {
+                withAnimation(.default){
+                    vm.sortOption = vm.sortOption == .price ? .priceReverse : .price
+                }
             }
 
-            Text("Price")
-                .frame(width: UIScreen.main.bounds.width / 3.5,alignment: .trailing)
+    
             Button {
                 withAnimation(.linear(duration: 2)){
                     vm.reloadData()
@@ -131,7 +164,11 @@ extension HomeView{
             }
             
         }
+        .refreshable {
+            vm.reloadData()
+        }
             .listStyle(PlainListStyle())
+        
             
             
     }
@@ -145,6 +182,9 @@ extension HomeView{
             }
             
         }
+            .refreshable {
+                vm.reloadData()
+            }
             .listStyle(PlainListStyle())
     }
 }
