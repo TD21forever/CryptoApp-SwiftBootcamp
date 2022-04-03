@@ -11,6 +11,9 @@ struct HomeView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio:Bool = false
     @State private var showPortfolioView:Bool = false //sheet
+    @State private var showDetailView:Bool = false
+    @State private var selectedCoin: CoinModel? = nil
+    
     var body: some View {
         ZStack{
             Color.theme.background
@@ -45,6 +48,14 @@ struct HomeView: View {
                 }
             }
             
+        }
+        .background{
+            NavigationLink(isActive: $showDetailView) {
+                DetailViewLoading(coin: $selectedCoin)
+            } label: {
+                EmptyView()
+            }
+
         }
     }
 }
@@ -158,19 +169,22 @@ extension HomeView{
     var allCoinList:some View{
         
         List{
+           
+
             ForEach(vm.allCoin) { coin in
+                
                 CoinRowView(coin: coin, showHoldingCurrency: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
-            
         }
         .refreshable {
             vm.reloadData()
         }
             .listStyle(PlainListStyle())
         
-            
-            
     }
     
     var portfolioCoinList:some View{
@@ -179,12 +193,29 @@ extension HomeView{
             ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingCurrency: true)
                 .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+             
             }
-            
         }
             .refreshable {
                 vm.reloadData()
             }
             .listStyle(PlainListStyle())
     }
+    
+    private func segue(coin:CoinModel){
+        selectedCoin = coin
+        showDetailView.toggle()
+        
+    }
 }
+
+//
+//struct NavigationLazyView<Content: View>: View {
+//    let build: () -> Content
+//    init(_ build: @autoclosure @escaping () -> Content) {
+//        self.build = build
+//    }
+//    var body: Content {
+//        build()
+//    }
+//}
