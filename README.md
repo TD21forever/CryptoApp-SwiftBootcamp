@@ -16,11 +16,11 @@ Tutorial url: https://www.youtube.com/watch?v=TTYKL6CfbSs&list=PLwvDm4Vfkdphbc3b
 
 ### HomeView
 
-<img src="/Users/wenzhuo/Library/Application Support/typora-user-images/image-20220410190644260.png" alt="image-20220410190644260" style="zoom: 25%;" />
+<img src="https://qiniu.dcts.top/typora/202204102010430.png" alt="image-20220410190644260" style="zoom: 25%;" />
 
-<img src="/Users/wenzhuo/Library/Application Support/typora-user-images/image-20220410190924295.png" alt="image-20220410190924295" style="zoom:25%;" />
+<img src="https://qiniu.dcts.top/typora/202204102010460.png" alt="image-20220410190924295" style="zoom:25%;" />
 
-<img src="/Users/wenzhuo/Library/Application Support/typora-user-images/image-20220410191019890.png" alt="image-20220410191019890" style="zoom:25%;" />
+<img src="https://qiniu.dcts.top/typora/202204102010479.png" alt="image-20220410191019890" style="zoom:25%;" />
 
 - allCoinList数据的获取
 
@@ -52,13 +52,13 @@ Tutorial url: https://www.youtube.com/watch?v=TTYKL6CfbSs&list=PLwvDm4Vfkdphbc3b
 
 ### DetailView
 
-<img src="/Users/wenzhuo/Library/Application Support/typora-user-images/image-20220410191452355.png" alt="image-20220410191452355" style="zoom:25%;" />
+<img src="https://qiniu.dcts.top/typora/202204102010491.png" alt="image-20220410191452355" style="zoom:25%;" />
 
 - 折线图表
 
 ### LaunchView
 
-<img src="/Users/wenzhuo/Library/Application Support/typora-user-images/image-20220410191539877.png" alt="image-20220410191539877" style="zoom:25%;" />
+<img src="https://qiniu.dcts.top/typora/202204102010502.png" alt="image-20220410191539877" style="zoom:25%;" />
 
 
 
