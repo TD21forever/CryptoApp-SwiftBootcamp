@@ -18,6 +18,7 @@ struct PortfolioView: View {
             
             
             ScrollView{
+                
                 VStack{
                     SearchBarView(searchText: $vm.searchText)
                     
